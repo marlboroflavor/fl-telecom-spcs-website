@@ -64,8 +64,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="section-inner image-band">
+      <section className="section truck-section">
+        <div className="section-inner image-band truck-showcase">
           <div>
             <p className="eyebrow">Why Contractors Call Us</p>
             <h2>Reliable labor, clear communication, and a contract-first mindset.</h2>
@@ -80,7 +80,7 @@ export default function Home() {
               <li>Direct phone, text, and contracts email contact</li>
             </ul>
           </div>
-          <div className="image-panel">
+          <div className="image-panel truck-panel">
             <img src="/images/truck-branding.jpg" alt="FL TELECOM SPCS branded telecom truck" />
           </div>
         </div>
