@@ -1,0 +1,4 @@
+.tools
+.npm-cache
+node_modules
+.next
