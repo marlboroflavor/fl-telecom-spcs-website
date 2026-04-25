@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FL TELECOM SPCS Website
 
 Professional Next.js website for FLORIDA TELECOMMUNICATIONS SPECIALISTS LLC.
@@ -43,3 +44,6 @@ For production, set `LEAD_WEBHOOK_URL` in Vercel if you want submissions forward
 4. Build command: `npm run build`.
 5. Optional environment variable: `LEAD_WEBHOOK_URL`.
 6. Deploy.
+=======
+# fl-telecom-spcs-website
+>>>>>>> a1982b22ff5fd68382ef546c8951a5f3c8eb42f1
