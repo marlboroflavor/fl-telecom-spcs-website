@@ -3,68 +3,58 @@ import Link from "next/link";
 const services = [
   {
     title: "Fiber Construction",
-    text: "Contract-ready crews for fiber placement, drops, restoration support, and field production needs across Florida."
+    text: "Fiber optic construction crews for drops, placement support, restoration, and closeout work across Florida."
   },
   {
     title: "Underground Bury",
-    text: "Clean underground telecom bury support for residential, commercial, and service extension scopes."
+    text: "Underground telecom bury support for residential, commercial, and service extension projects."
   },
   {
-    title: "Subcontracting Support",
-    text: "Responsive Florida field capacity for primes, network owners, and utility partners that need dependable crews."
+    title: "Subcontracting",
+    text: "Contract-ready field capacity for primes, network owners, and utility partners that need dependable crews."
   }
-];
-
-const strengths = [
-  "Fiber optic construction and restoration support",
-  "Underground bury crews for Florida telecom projects",
-  "Subcontracting conversations with fast response",
-  "Direct phone, text, and contracts email contact"
 ];
 
 export default function Home() {
   return (
     <main>
-      <section className="home-hero" id="home">
-        <div className="home-hero-inner">
-          <div className="hero-panel">
+      <section className="hero-section">
+        <div className="hero-grid">
+          <div className="hero-copy-card">
             <p className="eyebrow">Florida Telecom Contractor</p>
             <h1>Florida Fiber Optic Construction Crews</h1>
-            <p className="hero-subheadline">
+            <p className="hero-subtitle">
               Contract-ready telecom field support for fiber construction, underground bury, restoration, and
               subcontracting projects across Florida.
             </p>
             <div className="hero-actions">
-              <Link className="btn btn-primary" href="/subcontracting#partner-form">
+              <Link className="button button-primary" href="/subcontracting">
                 Partner With Us
               </Link>
-              <a className="btn btn-secondary" href="tel:+18135639779">
+              <a className="button button-secondary" href="tel:+18135639779">
                 Call/Text (813) 563-9779
               </a>
             </div>
-            <div className="hero-contact-row" aria-label="Direct contact">
-              <a href="mailto:contracts@fltelecomspcs.com">contracts@fltelecomspcs.com</a>
-              <span>Florida Telecommunications Specialists LLC</span>
-            </div>
           </div>
 
-          <div className="hero-image-card" aria-label="Telecom fiber crew at work">
-            <img src="/images/hero-fiber-crew.jpg" alt="Telecom fiber construction crew working in Florida" />
+          <div className="hero-image-card">
+            <img src="/images/hero-clean.png" alt="Florida telecom fiber construction crew" />
           </div>
         </div>
       </section>
 
-      <section className="section services-section" id="services">
+      <section className="services-section" id="services">
         <div className="section-inner">
-          <div className="section-header compact">
-            <p className="eyebrow">Core Services</p>
-            <h2>Field support built for telecom contractors.</h2>
+          <div className="section-heading">
+            <p className="eyebrow">Services</p>
+            <h2>Telecom field support built for production.</h2>
             <p>
-              FL TELECOM SPCS supports prime contractors and network partners with practical crews, clear communication,
-              and dependable project response.
+              Clean communication, responsive coordination, and dependable crews for Florida fiber and underground
+              telecom scopes.
             </p>
           </div>
-          <div className="service-grid">
+
+          <div className="services-grid">
             {services.map((service) => (
               <article className="service-card" key={service.title}>
                 <h3>{service.title}</h3>
@@ -75,46 +65,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section why-section">
-        <div className="section-inner split-layout">
-          <div>
-            <p className="eyebrow">Why Contractors Call Us</p>
-            <h2>Reliable labor, clear communication, and a contract-first mindset.</h2>
-          </div>
-          <div>
-            <p className="section-copy">
-              When telecom work needs to keep moving, FL TELECOM SPCS gives project teams a direct path to Florida field
-              support for fiber, underground bury, restoration, and subcontracting scopes.
-            </p>
-            <ul className="check-list">
-              {strengths.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="section truck-section">
-        <div className="section-inner truck-layout">
+      <section className="truck-section">
+        <div className="section-inner truck-grid">
           <div className="truck-image-card">
-            <img src="/images/truck-branding.jpg" alt="FL TELECOM SPCS branded telecom truck" />
+            <img src="/images/truck-section.png" alt="FL TELECOM SPCS branded telecom truck" />
           </div>
           <div className="truck-copy">
-            <p className="eyebrow">Branded Field Presence</p>
-            <h2>Professional crews for Florida fiber and telecom projects.</h2>
+            <p className="eyebrow">Contractor Ready</p>
+            <h2>Professional crews for Florida telecom projects.</h2>
             <p>
-              From the first call to field production, the team is built for straightforward communication, responsive
-              coordination, and contractor-ready support.
+              Florida Telecommunications Specialists LLC supports prime contractors and network partners with reliable
+              field labor, clear communication, and a contract-first mindset.
             </p>
-            <div className="truck-actions">
-              <a className="btn btn-primary" href="mailto:contracts@fltelecomspcs.com">
-                Email Contracts
-              </a>
-              <a className="btn btn-secondary" href="sms:+18135639779">
-                Text the Team
-              </a>
-            </div>
           </div>
         </div>
       </section>
