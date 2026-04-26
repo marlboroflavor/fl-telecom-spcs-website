@@ -112,6 +112,10 @@ img {
   object-fit: contain;
 }
 
+.brand-logo {
+  filter: brightness(0) invert(1);
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -372,7 +376,7 @@ h3 {
 .contact-panel,
 .image-panel {
   padding: 24px;
-  border-radius: 14px;
+  border-radius: 18px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.055);
 }
@@ -500,6 +504,7 @@ h3 {
   height: 100%;
   min-height: 360px;
   object-fit: cover;
+  border-radius: 18px;
 }
 
 .footer {

@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           <header className="header">
             <nav className="nav-inner" aria-label="Main navigation">
               <Link className="brand" href="/">
-                <img className="brand-logo" src="/images/logo-final.png" alt="FL TELECOM SPCS" />
+                <img className="brand-logo" src="/images/logo-final.png" className="brand-logo" alt="FL TELECOM SPCS" />
               </Link>
               <div className="nav-links">
                 {navItems.map(([label, href]) => (

@@ -12,7 +12,7 @@ export default function FiberConstructionPage() {
       <section className="section light">
         <div className="section-inner image-band">
           <div className="image-panel">
-            <img src="/images/hero-fiber-crew.jpg" alt="Telecom fiber construction crew at work" />
+            <img src="/images/hero-clean.png" alt="Telecom fiber construction crew at work" />
           </div>
           <div>
             <h2>Crews focused on clean, steady execution.</h2>
