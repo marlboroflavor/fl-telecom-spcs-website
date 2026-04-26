@@ -1,60 +1,50 @@
-import Link from "next/link";
-
 export default function Home() {
   return (
-    <main>
+    <main className="site">
       <section className="hero">
         <img
-          className="hero-bg"
+          className="heroImage"
           src="/images/hero-fiber-crew.jpg"
-          alt="Telecom fiber construction crew"
+          alt="Fiber Construction Crew"
         />
 
-        <div className="hero-overlay" />
+        <div className="overlay"></div>
 
-        <div className="hero-content">
+        <div className="heroText">
           <img
-            className="hero-logo"
+            className="logo"
             src="/images/logo-fl-telecom-spcs.png"
-            alt="FL Telecom SPCS logo"
+            alt="FL Telecom SPCS"
           />
 
-          <p className="eyebrow">Florida Telecom Contractor</p>
+          <p className="tag">FLORIDA TELECOM CONTRACTOR</p>
 
           <h1>Fiber Optic Construction Crews in Florida</h1>
 
-          <p className="lead">
+          <p className="description">
             Florida Telecommunications Specialists LLC supports telecom primes,
             network builders, and utility partners with fiber construction,
             underground bury, restoration, and contract-ready field crews.
           </p>
 
-          <div className="hero-actions">
-            <Link className="btn btn-primary" href="/subcontracting">
-              Partner With Us
-            </Link>
-
-            <a className="btn btn-secondary" href="tel:+18135639779">
-              Call (813) 563-9779
-            </a>
-          </div>
+          <a className="button" href="tel:+18135639779">
+            Call/Text (813) 563-9779
+          </a>
         </div>
       </section>
 
-      <section className="truck-section">
+      <section className="truck">
         <div>
-          <p className="eyebrow">Why contractors call us</p>
-          <h2>Reliable labor, clear communication, and a contract-first mindset.</h2>
+          <h2>Reliable field crews for telecom projects</h2>
           <p>
-            We provide dependable telecom crews, fast communication, and clean
-            field support across Florida.
+            Fiber construction, underground bury, restoration, and subcontracting
+            support across Florida.
           </p>
         </div>
 
         <img
-          className="truck-image"
           src="/images/truck-branding.jpg"
-          alt="FL Telecom truck branding"
+          alt="FL Telecom truck"
         />
       </section>
     </main>
