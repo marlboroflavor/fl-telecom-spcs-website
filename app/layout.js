@@ -37,13 +37,7 @@ export default function RootLayout({ children }) {
           <header className="header">
             <nav className="nav-inner" aria-label="Main navigation">
               <Link className="brand" href="/">
-                <span className="logo-frame">
-                  <img className="brand-logo" src="/images/logo-fl-telecom-spcs.jpg" alt="FL TELECOM SPCS logo" />
-                </span>
-                <span className="brand-name">
-                  FL TELECOM SPCS
-                  <small>Telecommunications Specialists</small>
-                </span>
+                <img className="brand-logo" src="/images/logo-fl-telecom-spcs.png" alt="FL TELECOM SPCS" />
               </Link>
               <div className="nav-links">
                 {navItems.map(([label, href]) => (
@@ -62,10 +56,7 @@ export default function RootLayout({ children }) {
             <div className="footer-inner">
               <div>
                 <div className="footer-brand">
-                  <span className="logo-frame footer-logo">
-                    <img className="brand-logo" src="/images/logo-fl-telecom-spcs.jpg" alt="FL TELECOM SPCS logo" />
-                  </span>
-                  <h3>FL TELECOM SPCS</h3>
+                  <img className="footer-logo" src="/images/logo-fl-telecom-spcs.png" alt="FL TELECOM SPCS" />
                 </div>
                 <p className="muted">
                   Florida Telecommunications Specialists LLC provides reliable field support for prime contractors,

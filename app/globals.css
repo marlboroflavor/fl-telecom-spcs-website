@@ -99,39 +99,13 @@ img {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
-  min-width: 210px;
-}
-
-.logo-frame {
-  width: 50px;
-  height: 50px;
-  display: grid;
-  place-items: center;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(2, 7, 17, 0.72);
-  overflow: hidden;
+  min-width: 160px;
 }
 
 .brand-logo {
-  width: 100%;
-  height: 100%;
+  width: 160px;
+  height: auto;
   object-fit: contain;
-}
-
-.brand-name {
-  display: grid;
-  gap: 1px;
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: 0;
-}
-
-.brand-name small {
-  color: var(--muted);
-  font-size: 0.7rem;
-  font-weight: 700;
 }
 
 .nav-links {
@@ -187,21 +161,27 @@ img {
 
 .hero {
   position: relative;
-  min-height: 680px;
+  min-height: 720px;
   display: flex;
   align-items: center;
+  overflow: hidden;
   isolation: isolate;
 }
 
-.hero::before {
-  content: "";
+.hero-bg {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background:
-    linear-gradient(90deg, rgba(2, 7, 17, 0.98), rgba(4, 13, 25, 0.84) 46%, rgba(4, 13, 25, 0.52)),
-    linear-gradient(180deg, rgba(2, 7, 17, 0.34), rgba(2, 7, 17, 0.66)),
-    url("/images/hero-fiber-crew.jpg") center / cover no-repeat;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .hero::after {
@@ -216,11 +196,15 @@ img {
 .hero-content {
   width: min(1160px, calc(100% - 36px));
   margin: 0 auto;
-  padding: 72px 0 104px;
+  padding: 88px 0 112px;
   display: grid;
-  grid-template-columns: minmax(0, 700px) minmax(280px, 380px);
-  align-items: end;
+  grid-template-columns: minmax(0, 720px) 1fr;
+  align-items: center;
   gap: 40px;
+}
+
+.hero-copy {
+  max-width: 720px;
 }
 
 .eyebrow {
@@ -273,30 +257,6 @@ h3 {
   margin-top: 30px;
 }
 
-.hero-card {
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 8px;
-  background: rgba(5, 15, 28, 0.78);
-  box-shadow: var(--shadow);
-  padding: 24px;
-}
-
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.stat strong {
-  display: block;
-  font-size: 1.8rem;
-  line-height: 1;
-}
-
-.stat span {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
 
 .section {
   padding: 86px 0;
@@ -313,9 +273,7 @@ h3 {
 }
 
 .truck-section {
-  background:
-    linear-gradient(180deg, rgba(6, 17, 31, 0), rgba(10, 27, 49, 0.98)),
-    var(--ink);
+  background: var(--ink);
 }
 
 .section-header {
@@ -402,7 +360,9 @@ h3 {
 
 .truck-panel {
   min-height: 500px;
+  border-radius: 18px;
   border-color: rgba(255, 255, 255, 0.18);
+  background: #07101d;
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
 }
 
@@ -415,6 +375,8 @@ h3 {
 
 .truck-panel img {
   min-height: 500px;
+  object-fit: contain;
+  background: #07101d;
 }
 
 .list-check {
@@ -508,9 +470,7 @@ h3 {
 }
 
 .cta-band {
-  background:
-    linear-gradient(90deg, rgba(3, 9, 18, 0.94), rgba(8, 28, 53, 0.78)),
-    url("/images/truck-branding.jpg") center / cover no-repeat;
+  background: linear-gradient(90deg, #020711, var(--ink-2));
   padding: 86px 0;
 }
 
@@ -519,9 +479,7 @@ h3 {
 }
 
 .page-hero {
-  background:
-    linear-gradient(90deg, rgba(3, 9, 18, 0.96), rgba(6, 17, 31, 0.73)),
-    url("/images/truck-branding.jpg") center / cover no-repeat;
+  background: linear-gradient(90deg, #020711, var(--ink-2));
   padding: 94px 0 78px;
 }
 
@@ -573,14 +531,13 @@ h3 {
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 13px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .footer-logo {
-  width: 54px;
-  height: 54px;
-  flex: 0 0 auto;
+  width: 160px;
+  height: auto;
+  object-fit: contain;
 }
 
 .footer h3 {
@@ -620,12 +577,9 @@ h3 {
   .grid-2,
   .contact-grid,
   .image-band,
-  .footer-inner {
+  .footer-inner,
+  .truck-showcase {
     grid-template-columns: 1fr;
-  }
-
-  .hero {
-    min-height: auto;
   }
 }
 
@@ -642,13 +596,13 @@ h3 {
     width: min(100% - 28px, 1160px);
   }
 
-  .logo-frame {
-    width: 44px;
-    height: 44px;
+  .brand {
+    min-width: 120px;
   }
 
-  .brand-name {
-    font-size: 0.95rem;
+  .brand-logo,
+  .footer-logo {
+    width: 120px;
   }
 
   .nav-links {
@@ -660,15 +614,23 @@ h3 {
     display: none;
   }
 
+  .hero {
+    min-height: 560px;
+  }
+
   .hero-content {
-    padding: 58px 0 78px;
+    padding: 72px 0 82px;
   }
 
   h1 {
     font-size: clamp(2.45rem, 14vw, 3.65rem);
   }
 
-  .hero-card,
+  .truck-panel,
+  .truck-panel img {
+    min-height: 300px;
+  }
+
   .form-panel,
   .contact-panel,
   .card {

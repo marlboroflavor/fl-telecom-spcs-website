@@ -6,8 +6,10 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
+        <img className="hero-bg" src="/images/hero-fiber-crew.jpg" alt="Telecom fiber crew at work" />
+        <div className="hero-overlay" />
         <div className="hero-content">
-          <div>
+          <div className="hero-copy">
             <p className="eyebrow">Florida Telecom Contractor</p>
             <h1>FL TELECOM SPCS</h1>
             <p className="lead">
@@ -24,27 +26,6 @@ export default function Home() {
               <a className="btn btn-secondary" href="tel:+18135639779">
                 Call (813) 563-9779
               </a>
-            </div>
-          </div>
-          <div className="hero-card">
-            <p className="eyebrow">Built For Production</p>
-            <div className="stat-grid">
-              <div className="stat">
-                <strong>FL</strong>
-                <span>Florida-based operations</span>
-              </div>
-              <div className="stat">
-                <strong>24h</strong>
-                <span>Fast contract response</span>
-              </div>
-              <div className="stat">
-                <strong>3</strong>
-                <span>Quote, partner, hiring forms</span>
-              </div>
-              <div className="stat">
-                <strong>1</strong>
-                <span>Direct contracts inbox</span>
-              </div>
             </div>
           </div>
         </div>
