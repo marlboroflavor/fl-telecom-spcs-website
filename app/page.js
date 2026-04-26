@@ -1,6 +1,4 @@
 import Link from "next/link";
-import LeadForm from "./components/LeadForm";
-import { ContactPanel, ServicesGrid } from "./components/Sections";
 
 export default function Home() {
   return (
@@ -15,13 +13,11 @@ export default function Home() {
         <div className="hero-overlay" />
 
         <div className="hero-content">
-          <div className="hero-logo-wrap">
-            <img
-              className="hero-logo"
-              src="/images/logo-fl-telecom-spcs.png"
-              alt="FL Telecom SPCS logo"
-            />
-          </div>
+          <img
+            className="hero-logo"
+            src="/images/logo-fl-telecom-spcs.png"
+            alt="FL Telecom SPCS logo"
+          />
 
           <p className="eyebrow">Florida Telecom Contractor</p>
 
@@ -34,12 +30,8 @@ export default function Home() {
           </p>
 
           <div className="hero-actions">
-            <Link className="btn btn-primary" href="/subcontracting#partner-form">
+            <Link className="btn btn-primary" href="/subcontracting">
               Partner With Us
-            </Link>
-
-            <Link className="btn btn-secondary" href="/careers#apply-form">
-              Apply for Work
             </Link>
 
             <a className="btn btn-secondary" href="tel:+18135639779">
@@ -50,34 +42,20 @@ export default function Home() {
       </section>
 
       <section className="truck-section">
-        <div className="truck-text">
+        <div>
           <p className="eyebrow">Why contractors call us</p>
-
           <h2>Reliable labor, clear communication, and a contract-first mindset.</h2>
-
           <p>
-            FL TELECOM SPCS is positioned for prime contractors that need
-            dependable crews, fast quoting, clean field reporting, and responsive
-            communication from first contact through closeout.
+            We provide dependable telecom crews, fast communication, and clean
+            field support across Florida.
           </p>
         </div>
 
-        <div className="truck-image-wrap">
-          <img
-            className="truck-image"
-            src="/images/truck-branding.jpg"
-            alt="FL Telecom branded truck"
-          />
-        </div>
-      </section>
-
-      <ServicesGrid />
-
-      <ContactPanel />
-
-      <section id="partner-form" className="form-section">
-        <h2>Request subcontracting support</h2>
-        <LeadForm />
+        <img
+          className="truck-image"
+          src="/images/truck-branding.jpg"
+          alt="FL Telecom truck branding"
+        />
       </section>
     </main>
   );
