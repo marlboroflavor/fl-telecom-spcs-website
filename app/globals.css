@@ -175,7 +175,7 @@ img {
   width: min(1160px, calc(100% - 36px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 0.94fr) minmax(420px, 1.06fr);
+  grid-template-columns: minmax(0, 45%) minmax(0, 55%);
   gap: 34px;
   align-items: center;
 }
@@ -262,10 +262,19 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.hero-image-card {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
 .hero-image-card img {
   width: 100%;
-  height: clamp(420px, 48vw, 620px);
-  object-fit: cover;
+  height: 100%;
+  max-height: 600px;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -639,8 +648,13 @@ h3 {
     padding: 20px;
   }
 
+  .hero-image-card {
+    min-height: 360px;
+    padding: 12px;
+  }
+
   .hero-image-card img {
-    height: 320px;
+    max-height: 360px;
   }
 
   .truck-image-card img {
