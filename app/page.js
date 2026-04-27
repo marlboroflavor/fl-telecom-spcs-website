@@ -116,11 +116,12 @@ export default function Home() {
             </div>
           </div>
 
-          <form className="lead-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form className="lead-form" action="https://formspree.io/f/xpqkeppl" method="POST">
             <h2>Request a Quote</h2>
+            <input type="hidden" name="_subject" value="New Lead from FL Telecom SPCS Website" />
             <label>
               Full Name
-              <input name="fullName" type="text" autoComplete="name" required />
+              <input name="name" type="text" autoComplete="name" required />
             </label>
             <label>
               Email Address
