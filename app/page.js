@@ -80,6 +80,83 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="contact-section" id="contact">
+        <div className="contact-wrap">
+          <div className="contact-info">
+            <p className="section-kicker">DIRECT CONTACT</p>
+            <h2>Ready to mobilize crews in Florida?</h2>
+            <p className="contact-subtitle">
+              Reach FL TELECOM SPCS for fiber construction support, underground bury, subcontracting opportunities,
+              quotes, hiring questions, and project coordination.
+            </p>
+
+            <div className="contact-details">
+              <div className="contact-row">
+                <span>Phone/Text</span>
+                <a href="tel:+18135639779">(813) 563-9779</a>
+              </div>
+              <div className="contact-row">
+                <span>Email</span>
+                <a href="mailto:contracts@fltelecomspcs.com">contracts@fltelecomspcs.com</a>
+              </div>
+              <div className="contact-row">
+                <span>Location</span>
+                <strong>Florida</strong>
+              </div>
+            </div>
+
+            <div className="contact-actions">
+              <a className="btn-primary" href="tel:+18135639779">
+                Call Now
+              </a>
+              <a className="btn-secondary" href="sms:+18135639779">
+                Text Us
+              </a>
+            </div>
+          </div>
+
+          <form className="lead-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <h2>Request a Quote</h2>
+            <label>
+              Full Name
+              <input name="fullName" type="text" autoComplete="name" required />
+            </label>
+            <label>
+              Email Address
+              <input name="email" type="email" autoComplete="email" required />
+            </label>
+            <label>
+              Phone Number
+              <input name="phone" type="tel" autoComplete="tel" required />
+            </label>
+            <label>
+              Company Name
+              <input name="company" type="text" autoComplete="organization" />
+            </label>
+            <label>
+              Service
+              <select name="service" defaultValue="" required>
+                <option value="" disabled>
+                  Select a service
+                </option>
+                <option>Fiber Construction</option>
+                <option>Underground Bury</option>
+                <option>Subcontracting</option>
+                <option>Restoration</option>
+                <option>Hiring</option>
+              </select>
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required />
+            </label>
+            <button className="form-btn" type="submit">
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
   );
 }
